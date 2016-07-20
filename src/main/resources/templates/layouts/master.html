@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title layout:fragment="page_title">Default Title</title>
+	    <th:block th:include="partials/master/style"></th:block>
+	</head>
+	<body class="skin-yellow">
+        <div class="wrapper">
+            <th:block th:include="partials/master/header"></th:block>
+            <th:block th:include="partials/master/sidebar"></th:block>
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        <th:block layout:fragment="page_title"></th:block>
+                    </h1>                    
+                </section>
+                <section class="content">
+                    <div class="box box-default">
+                        <div class="box-body">
+                            <div class="row">
+                                <div layout:fragment="content" class="col-xs-12">
+                                    <!-- CONTENT GOES HERE -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <th:block th:include="partials/master/footer"></th:block>
+        </div>        
+        <th:block th:include="partials/master/script"></th:block>
+        <th:block layout:fragment="javascript"></th:block>
+    </body>
+</html>

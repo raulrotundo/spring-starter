@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Title Default</title>
+		<th:block th:include="partials/access/style"></th:block>
+	</head>
+	<body class="hold-transition login-page">
+		<th:block layout:fragment="content"></th:block>
+		<th:block th:include="partials/access/script"></th:block> 
+		<th:block layout:fragment="javascript"></th:block>
+	</body>
+</html>
